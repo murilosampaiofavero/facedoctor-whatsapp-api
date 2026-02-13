@@ -191,3 +191,8 @@ def api_send_message():
         salvar_mensagem(lead_id, text, 'outbound')
         
     return jsonify({"status": "sent"}), 200
+
+if __name__ == '__main__':
+    # O Render fornece a porta na variável de ambiente PORT
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
