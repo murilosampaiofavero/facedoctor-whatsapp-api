@@ -3,3 +3,4 @@ requests
 supabase
 gunicorn
 python-dotenv
+flask-cors
