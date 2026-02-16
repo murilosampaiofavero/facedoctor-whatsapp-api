@@ -1,16 +1,6 @@
 import os
 from flask import Flask, request, jsonify
-from flask_cors import CORS  # <--- LINHA NOVA
-import requests
-from supabase import create_client, Client
-
-app = Flask(__name__)
-CORS(app)  # <--- LINHA NOVA: Isso libera o acesso para o seu CRM na Vercel
-
-# ... (restante do seu código igual)
-
-import os
-from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 from supabase import create_client, Client
 from dotenv import load_dotenv
@@ -19,6 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)
 
 # --- CONFIGURAÇÕES ---
 # As variáveis de ambiente devem ser configuradas no painel do Render
